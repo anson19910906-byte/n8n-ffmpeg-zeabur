@@ -1,0 +1,14 @@
+{
+  $schema httpszeabur.comschemaservice.json,
+  services {
+    n8n {
+      port 5678,
+      volumes [
+        {
+          name n8n-data,
+          mountPath homenode.n8n
+        }
+      ]
+    }
+  }
+}
