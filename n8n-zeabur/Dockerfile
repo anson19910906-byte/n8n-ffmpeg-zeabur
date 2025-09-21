@@ -10,5 +10,5 @@ RUN apt-get update && apt-get install -y ffmpeg && rm -rf /var/lib/apt/lists/*
 # 步驟 4: 切換回 n8n 預設的非 root 使用者
 USER node
 
-# 步驟 5: (關鍵修正) 明確指定容器啟動時要執行的指令
-CMD ["n8n"]
+# 步驟 5: (最終修正) 強制設定容器的進入點為 n8n
+ENTRYPOINT ["n8n"]
